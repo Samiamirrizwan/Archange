@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | ARCHANGE Portfolio</title>
+
+    <!-- Favicon (your logo) -->
+    <link rel="icon" type="image/png" href="favicon.ico">
+
+
     <link rel="stylesheet" href="css/style.css">
     <style>
         .legal-container {
@@ -57,6 +62,15 @@
     </style>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader" aria-hidden="true">
+        <div class="preloader-content">
+            <img src="Archange-Logo.png" alt="ARCHANGE" class="preloader-logo-img">
+            <p class="preloader-text glitch-text" data-text="ARCHANGE">ARCHANGE</p>
+            <span class="preloader-status">ENCRYPTING PRIVACY...</span>
+        </div>
+    </div>
+
     <div class="glass-card glow-teal legal-container">
         <h2><i class="fas fa-user-shield" style="margin-right:0.5rem;"></i> Privacy Policy</h2>
         <p><strong>Effective Date:</strong> January 2026</p>
@@ -116,5 +130,19 @@
 
         <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
     </div>
+
+    <script>
+        (function() {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', function() {
+                    setTimeout(function() { preloader.classList.add('fade-out'); }, 800);
+                });
+                setTimeout(function() {
+                    if (preloader && !preloader.classList.contains('fade-out')) preloader.classList.add('fade-out');
+                }, 2000);
+            }
+        })();
+    </script>
 </body>
 </html>

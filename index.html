@@ -23,10 +23,22 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Favicon (letter A) -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Favicon (your logo) -->
+    <link rel="icon" type="image/png" href="favicon.ico">
 </head>
 <body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader" aria-hidden="true">
+        <div class="preloader-content">
+            <img src="Archange-Logo.png" alt="ARCHANGE" class="preloader-logo-img">
+            <p class="preloader-text glitch-text" data-text="ARCHANGE">ARCHANGE</p>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+            <span class="preloader-status">INITIALIZING SYSTEMS...</span>
+        </div>
+    </div>
 
     <!-- Background Layers -->
     <canvas id="particle-canvas" aria-hidden="true"></canvas>
@@ -36,10 +48,7 @@
     <!-- Navigation -->
     <nav class="nav-bar" id="navbar" role="navigation" aria-label="Main navigation">
         <span class="nav-logo">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12,2 22,22 2,22"/>
-                <line x1="7" y1="16" x2="17" y2="16"/>
-            </svg>
+            <img src="Archange-Logo.png" alt="ARCHANGE logo" class="nav-logo-img">
             ARCHANGE
         </span>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
@@ -121,7 +130,10 @@
                         <strong>🌐 Languages:</strong> Urdu (Native), English (Fluent)
                     </p>
                     <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.4rem;">
-                        <strong>🎓 Education:</strong> Aptech Institute (2023–2027), IGCSE O-Level (THCC, 2018–2023)
+                        <strong>🎓 Education:</strong>
+                        <span>Higher Diploma in Software Engineering (SBTE Inter Equivalent) – Aptech Institute (2023–2027) <i class="fas fa-spinner fa-pulse" style="color:var(--accent-teal); margin-left:0.3rem;" title="Currently in progress"></i></span>
+                        <br>
+                        <span style="opacity:0.8;">IGCSE O-Level – THCC (2018–2023)</span>
                     </p>
                     <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.4rem;">
                         <strong>📡 Status:</strong> Open to freelance & remote opportunities
