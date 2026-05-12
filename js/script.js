@@ -161,7 +161,7 @@
         'python': 'Python is part of his versatile back-end toolkit, used for scripting and automation alongside web development.',
         'seo': 'On-page SEO, speed optimization, caching, schema markup. Achieved Page 1 rankings and 90+ PageSpeed scores.',
         'location': '📍 Based in <strong>Karachi, Pakistan</strong>. Available globally for remote work.',
-        'education': '🎓 <strong>Aptech Institute</strong> – Higher Diploma in Software Engineering (2023–2027)<br>🎓 <strong>THCC</strong> – IGCSE O-Level (2018–2023)',
+        'education': '🎓 <strong>Aptech Institute</strong> – Higher Diploma in Software Engineering (SBTE Inter Equivalent, 2023–2027)<br>🎓 <strong>THCC</strong> – IGCSE O-Level (2018–2023)',
         'achievements': '🏆 Load time <3s, 90+ PageSpeed, Page 1 rankings, zero-downtime migrations.',
         'default': 'I can tell you about Sami\'s <em>skills, experience, projects, contact</em> info, or how to <em>hire</em> him. Type <em>help</em> for options.',
     };
@@ -260,6 +260,36 @@
             }
         });
     }, 300);
+
+    // ──────────────────────────────────
+    // PRELOADER
+    // ──────────────────────────────────
+    const preloader = document.getElementById('preloader');
+    
+    function hidePreloader() {
+        if (preloader) {
+            preloader.classList.add('fade-out');
+            // Remove from DOM after transition
+            setTimeout(() => {
+                if (preloader && preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                }
+            }, 700); // matches CSS transition duration
+        }
+    }
+
+    // Hide preloader once window is fully loaded (including fonts, images)
+    window.addEventListener('load', () => {
+        // Short delay to let animations play out slightly
+        setTimeout(hidePreloader, 600);
+    });
+
+    // Fallback: if load event takes too long, hide after 4 seconds anyway
+    setTimeout(() => {
+        if (preloader && !preloader.classList.contains('fade-out')) {
+            hidePreloader();
+        }
+    }, 4000);
 
     console.log('%c🚀 ARCHANGE Portfolio System Online %c| %cSami Amir Rizwan',
         'color:#00d4ff;font-size:1.2em;', '', 'color:#00f0a8;');
