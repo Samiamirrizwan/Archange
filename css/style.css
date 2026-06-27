@@ -30,6 +30,72 @@
     --z-loader: 999;
 }
 
+/* =========================================
+   2. CLEAN IMAGE FRAME 
+   ========================================= */
+.hero-visual-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.clean-glass-frame {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    padding: 12px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: var(--glow-cyan);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover state instead of chaotic animations */
+.clean-glass-frame:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.20);
+    border-color: var(--glass-border-strong);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   3. PRACTICAL TECH BADGES
+   ========================================= */
+.tech-stack-badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: -18px; /* Pulls the badges up to overlap the image slightly */
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    background: var(--bg-deep);
+    color: var(--accent-cyan);
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid var(--glass-border-strong);
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
 *,
 *::before,
 *::after {
